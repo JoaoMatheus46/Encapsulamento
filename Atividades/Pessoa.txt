@@ -1,0 +1,45 @@
+﻿Pessoa.cs:
+------------------------------------------------------------
+public class Pessoa
+    {
+        public string _nome;
+
+        public int MyProperty { get; set; }
+
+        public string Nome
+        {
+            get { return _nome; }
+            set
+            {
+                if (string.IsNullOrWhiteSpace(value))
+                { 
+                    Console.WriteLine("Nome não pode ser nulo"); 
+                }
+                else
+                {
+                    _nome = value;
+                }
+            }
+        }
+    }
+}
+--------------------------------------------------------------------
+Program.cs:
+--------------------------------------------------------------------
+namespace Encapsulamento
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Pessoa p = new Pessoa();
+            p.Nome = "João"; // Atribuindo valor ao nome usando a propriedade
+            
+            Console.WriteLine(p.Nome);
+
+
+
+            Console.ReadKey();
+        }
+    }
+}
