@@ -1,0 +1,26 @@
+﻿
+namespace Encapsulamento
+{
+    internal class Produto
+    {
+        private double _preco;
+
+        public int MyProperty { get; set; }
+
+        public double Preco
+        {
+            get { return _preco; }
+            set
+            {
+                if (value < 0)
+                {
+                    Console.WriteLine("O preço é 0");
+                }
+                else
+                {
+                    _preco = value;
+                }
+            }
+        }
+    }
+}
