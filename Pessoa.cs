@@ -1,8 +1,4 @@
-﻿
-
-namespace Encapsulamento
-{
-    public class Pessoa
+﻿    public class Pessoa
     {
         public string _nome;
 
@@ -14,8 +10,8 @@ namespace Encapsulamento
             set
             {
                 if (string.IsNullOrWhiteSpace(value))
-                { 
-                    Console.WriteLine("Nome não pode ser nulo"); 
+                {
+                    Console.WriteLine("Nome não pode ser nulo");
                 }
                 else
                 {
@@ -24,4 +20,3 @@ namespace Encapsulamento
             }
         }
     }
-}
